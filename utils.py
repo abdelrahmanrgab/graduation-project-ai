@@ -30,8 +30,9 @@ def generate_text(prompt):
         data = res.read()
 
         if res.status == 200:
-            response_data = data.decode("utf-8")
-            return response_data
+            response_data = json.loads(data.decode("utf-8"))  # Parse the response JSON
+
+            return response_data["result"]
         else:
             print(f"Error: {res.status}, {res.reason}")
             print(f"Response: {data.decode('utf-8')}")
