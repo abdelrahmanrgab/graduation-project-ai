@@ -21,7 +21,7 @@ def read_root():
     return RedirectResponse(url="/docs")
 
 # Define a function to handle the POST request at `/generate-schema`
-@app.post("/generate-schema", response_model=dict)
+@app.post("/generate-hero", response_model=dict)
 def generate_schema_route(user_text: str):
     """
     Generate a schema for a hero section of a website based on user input text.
