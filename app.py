@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from utils import generate_text , search_image
+from starlette.responses import RedirectResponse  # Import RedirectResponse from starlette.responses
+from utils import generate_text, search_image
 
 # Create a new FastAPI app instance
 app = FastAPI()
