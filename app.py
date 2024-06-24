@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from utils import generate_text
+from utils import generate_text , search_image
 
 # Create a new FastAPI app instance
 app = FastAPI()
@@ -33,7 +33,7 @@ def generate_schema_route(user_text: str):
     
     hero = {
         'title': title,
-        'imgUrl': "imgUrl",  # Replace with actual image URL logic
+        'imgUrl': search_image(f"i need image which used as wallpaper for website about {user_text}"), 
         'buttonText': "Get Started",
         'icon': "https://res.cloudinary.com/duc04fwdb/image/upload/v1701813389/templates/template_one/Vector_5_vvvt2o.svg",
         'description': description,
