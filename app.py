@@ -38,7 +38,6 @@ def generate_schema_route(input: UserText):
     # Generate text for different sections of the website
     title = generate_text(f"Suggest a name for a website about {user_text}")
     description = generate_text(f"Create a brief description for a website about {user_text}")
-<<<<<<< HEAD
 
     # Define the schema for the website
     schema = {
@@ -200,8 +199,6 @@ if __name__ == "__main__":
 
 
 
-=======
->>>>>>> 22118db1dcb0b0693b2e1b1394dca2435bb1f0b6
 
     # Define the schema for the website
     schema = {
