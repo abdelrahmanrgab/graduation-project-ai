@@ -40,7 +40,7 @@ def select_schema(template_id, user_text):
         4:schema_4,
         5:schema_5,
         6:schema_6
-         
+        
     }
     
     schema_function = schema_functions.get(template_id)
