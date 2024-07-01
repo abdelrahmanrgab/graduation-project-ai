@@ -1,35 +1,57 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from starlette.responses import RedirectResponse
 from pydantic import BaseModel
+# from utils import generate_text, search_image
+from schemas.schema1 import schema_1
+from schemas.schema2 import schema_2
+from schemas.schema3 import schema_3
+from schemas.schema4 import schema_4
 
 app = FastAPI()
 
-class UserText(BaseModel):
+class UserInput(BaseModel):
     user_text: str
+    TemplateId: int
 
-@app.post("/generate-schema/{schema_id}", response_model=dict)
-def generate_schema_route(schema_id: int, input: UserText):
-    """
-    Generate a schema based on the schema ID and user input text.
-    """
-    user_text = input.user_text
-    if not user_text:
-        raise HTTPException(status_code=400, detail="user_text is required")
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
 
-    if schema_id not in schemas:
-        raise HTTPException(status_code=404, detail="Schema ID not found")
+# Define a root path to verify the server is running
+@app.get("/", include_in_schema=False)
+def read_root():
+    return RedirectResponse(url="/docs")
 
-    schema = schemas[str(schema_id)]
 
-    # Dynamically generate text and images for the schema
-    schema["hero"]["title"] = generate_text(f"Suggest a name for a website about {user_text}")
-    schema["hero"]["description"] = generate_text(f"Create a brief description for a website about {user_text}")
-    schema["hero"]["imgUrl"] = search_image(f"Image for website about {user_text}")
+def select_schema(template_id, user_text):
+    schema_functions = {
+        1: schema_1,
+        2: schema_2,
+        3:schema_3,
+        4:schema_4 
+    }
+    
+    schema_function = schema_functions.get(template_id)
+    if not schema_function:
+        raise HTTPException(status_code=404, detail="Template ID not found")
+    
+    return schema_function(user_text)
+@app.post("/generate-schema")
+def generate_schema(user_input: UserInput):
+    user_text = user_input.user_text
+    template_id = user_input.TemplateId
 
-    # Populate other fields as required
+    selected_schema = select_schema(template_id, user_text)
+    return selected_schema
 
-    return schema
-
-# Start the FastAPI app
+# Run the FastAPI app
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8002)
+
