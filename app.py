@@ -7,6 +7,9 @@ from schemas.schema1 import schema_1
 from schemas.schema2 import schema_2
 from schemas.schema3 import schema_3
 from schemas.schema4 import schema_4
+from schemas.schema5 import schema_5
+from schemas.schema6 import schema_6
+
 
 app = FastAPI()
 
@@ -34,7 +37,10 @@ def select_schema(template_id, user_text):
         1: schema_1,
         2: schema_2,
         3:schema_3,
-        4:schema_4 
+        4:schema_4,
+        5:schema_5,
+        6:schema_6
+         
     }
     
     schema_function = schema_functions.get(template_id)

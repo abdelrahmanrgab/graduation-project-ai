@@ -1,6 +1,6 @@
 from utils import generate_text, search_image
 
-def schema_fitness(user_text):
+def schema_6(user_text):
     return {
         "templateInfo": {
             "id": 6,
