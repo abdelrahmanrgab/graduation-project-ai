@@ -1,19 +1,40 @@
 from gradio_client import Client
 import json
 import requests
+import time
 
 client = Client("alanchen1115/gemini_api")
 
 def generate_text(prompt):
-    try:
-        result = client.predict(prompt=prompt, api_name="/predict")
-        return result
-    except Exception as e:
-        print(f"Exception occurred: {str(e)}")
-        return None
+    def check(prompt, attempt=1):
+        try:
+            result = client.predict(prompt=prompt, api_name="/predict")
+            # Check if the result indicates quota exhaustion
+            if result == "429 Resource has been exhausted (e.g. check quota).":
+                if attempt <= 3:  # Reduce the number of retries to 3
+                    wait_time = 5  # Use a fixed backoff time (5 seconds)
+                    print(f"Rate limited. Retrying attempt {attempt} in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    return check(prompt, attempt + 1)
+                elif attempt <= 5:
+                    wait_time = 60  # After 3 attempts, wait for a longer period (1 minute)
+                    print(f"Extended wait due to persistent rate limiting. Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    return check(prompt, attempt + 1)
+                else:
+                    print("Maximum retry attempts reached. Quota exhausted.")
+                    return None
+            else:
+                return result
+
+        except Exception as e:
+            print(f"Exception occurred: {str(e)}")
+            return None
+
+    return check(prompt)
 
 def search_image(image_name):
-    api_key = 'AIzaSyDAqHqVO9fRiESqLeQjslNh53ZiV36rgqI'
+    api_key = 'AIzaSyCUiG8Cm9TdIKasE4Ruasd0ZmLPgjSZ-nY'
     cx = '7266ebe81ea1a4367'
 
     try:

@@ -1,6 +1,82 @@
+import json
 from utils import generate_text, search_image
 
 def schema_1(user_text):
+    services_prompt = f"generate only json array of object [{'{title:}'},{'{description:}'}] just only 3 titles in 2 words and brief descriptions in 15 words each for services related to {user_text}"
+    testimonials_prompt = f"generate only json array of object [{'{description:}'}] have just only 3 brief descriptions in 10 words each for clients who used our services about {user_text}"
+    projects_prompt = f"generate only json array of object [{'{title:}'},{'{description:}'}] just only have 4 title names in 2 or 3 words for a section about projects and brief descriptions in 2 words for the projects section related to {user_text}"
+
+    # Generate data
+    services_json = generate_text(services_prompt)
+    testimonials_json = generate_text(testimonials_prompt)
+    projects_json = generate_text(projects_prompt)
+
+
+    # Parse services
+    try:
+        services = json.loads(services_json)
+    except json.JSONDecodeError as e:
+        print(f"Error parsing services JSON: {e}")
+        services = []
+
+    # Parse testimonials
+    try:
+        testimonials = json.loads(testimonials_json)
+    except json.JSONDecodeError as e:
+        print(f"Error parsing testimonials JSON: {e}")
+        testimonials = []
+
+    # Parse projects
+    try:
+        projects = json.loads(projects_json)
+    except json.JSONDecodeError as e:
+        print(f"Error parsing projects JSON: {e}")
+        projects = []
+
+    # Prepare services data
+    services_data = []
+    for i in range(3):  # Assuming always 3 services based on your prompt
+        service_title_key = f"title{i+1}"
+        service_description_key = f"description{i+1}"
+
+        if i < len(services):
+            services_data.append({
+                "title": services[i].get("title", f"Title not found for service {i+1}"),
+                "description": services[i].get("description", f"Description not found for service {i+1}"),
+                "icon": f"https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_{i+1}_xvd7d6.svg"
+            })
+        else:
+            print(f"Title or description not found for service {i+1}")
+
+    # Prepare projects data
+    projects_data = []
+    for j in range(4):  # Assuming always 4 projects based on your prompt
+        project_title_key = f"title{j+1}"
+        project_description_key = f"description{j+1}"
+
+        if j < len(projects):
+            projects_data.append({
+                "title": projects[j].get("title", f"Title not found for project {j+1}"),
+                "description": projects[j].get("description", f"Description not found for project {j+1}"),
+                "imgUrl": search_image(f"I need an image to represent the  project for a website about {user_text}"),
+                "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
+            })
+        else:
+            print(f"Title or description not found for project {j+1}")
+
+    # Prepare testimonials data
+    testimonials_data = []
+    for k in range(3):  # Assuming always 3 testimonials based on your prompt
+        if k < len(testimonials):
+            testimonials_data.append({
+                "name": f"Client {k+1}",
+                "location": "Sydney, Australia",  # Assuming static location for all testimonials
+                "imgUrl": search_image("portrait of a client"),
+                "opinion": testimonials[k].get("description", f"No testimonial found for index {k}")
+            })
+        else:
+            print(f"No testimonial found for index {k}")
+
     return {
         "templateInfo": {
             "id": 1,
@@ -45,23 +121,7 @@ def schema_1(user_text):
             "imgUrl": search_image(f"I need an link for image to be used as wallpaper for a website about {user_text}")
         },
         "services": {
-            "services": [
-                {
-                    "title": generate_text(f"generate just only title name for a service related to {user_text}"),
-                    "description": generate_text(f"Create a brief description in 15 words for a service related to {user_text}"),        
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_one_xvd7d6.svg"
-                },
-                {
-                    "title": generate_text(f"generate just only title name for a service related to {user_text}"),
-                    "description": generate_text(f"Create a brief description in just 15  words for a service related to {user_text}"), 
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_two_dptua1.svg"
-                },
-                {
-                    "title": generate_text(f"generate just only title name for a service related to {user_text}"),
-                    "description": generate_text(f"Create a brief description in just 15 words for a service related to {user_text}"), 
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_three_v71ltg.svg"
-                }
-            ]
+            "services": services_data
         },
         "features": {
             "title": generate_text(f"Suggest a title for a feature in 10 words related to {user_text}"),
@@ -76,26 +136,7 @@ def schema_1(user_text):
         },
         "testimonials": {
             "title": "What the People Thinks About Us",
-            "testimonials": [
-                {
-                    "name": "Nattasha Mith",
-                    "location": "Sydney, USA",
-                    "imgUrl": search_image("portrait of a client"),
-                    "opinion": generate_text(f"Generate a brief description for in 10 : 15 words aclient who used our services about {user_text}")
-                },
-                {
-                    "name": "Raymond Galario",
-                    "location": "Sydney, Australia",
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808853/templates/template_one/Photo_1_zsyklb.jpg",
-                    "opinion":  generate_text(f"Generate a brief description for in 10 : 15 words a client who used our services about {user_text}")
-                },
-                {
-                    "name": "Benny Roll ",
-                    "location": "Sydney, New York",
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808853/templates/template_one/Photo_1_zsyklb.jpg",
-                    "opinion":  generate_text(f"Generate a brief description for in 10 : 15 words a client who used our services about {user_text}")
-                }
-            ]
+            "testimonials": testimonials_data
         },
         "logos": {
             "companies": [
@@ -124,32 +165,7 @@ def schema_1(user_text):
         "projects": {
             "title": "Follow Our Projects",
             "description": "It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.",
-            "projects": [
-                {
-                    "title": generate_text(f"generate only title name in 2 or 3 words for a section about projects related to {user_text}"),
-                    "description": generate_text(f"just Write a brief description in 2 words for the projects section of a {user_text} website"),
-                    "imgUrl": search_image(f"I need an image to represent the name of the first project for a website about {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
-                },
-                {
-                    "title": generate_text(f"generate another only title name in 2 or 3 words for a section about projects related to {user_text}"),
-                    "description": generate_text(f"just Write a brief description in 2 words like Decor / Artchitecture for the projects section of a {user_text} website"),
-                    "imgUrl": search_image(f"I need an image to represent the name of the first project for a website about {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
-                },
-                {
-                    "title": generate_text(f"generate another only title name in 2 or 3 words for a section about projects related to {user_text}"),
-                    "description": generate_text(f"just Write a brief description in 2 words like Decor / Artchitecture for the projects section of a {user_text} website"),
-                    "imgUrl": search_image(f"I need an image to represent the name of the first project for a website about {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
-                },
-                {
-                    "title": generate_text(f"generate another only title name in 2 or 3 words for a section about projects related to {user_text}"),
-                    "description": generate_text(f"Write a brief description in 2 words like Decor / Artchitecture for the projects section of a {user_text} website"),
-                    "imgUrl": search_image(f"I need an image to represent the name of the first project for a website about {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
-                }
-            ]
+            "projects": projects_data
         },
         "statistics": {
             "statistics": [
