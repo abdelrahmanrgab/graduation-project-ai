@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
 from pydantic import BaseModel
-# from utils import generate_text, search_image
+from utils import generate_text
 from schemas.schema1 import schema_1
 from schemas.schema2 import schema_2
 from schemas.schema3 import schema_3
@@ -16,6 +16,9 @@ app = FastAPI()
 class UserInput(BaseModel):
     user_text: str
     TemplateId: int
+
+class TextRequest(BaseModel):
+    text: str
 
 # Add CORS middleware
 app.add_middleware(
@@ -48,6 +51,8 @@ def select_schema(template_id, user_text):
         raise HTTPException(status_code=404, detail="Template ID not found")
     
     return schema_function(user_text)
+
+
 @app.post("/generate-schema")
 def generate_schema(user_input: UserInput):
     user_text = user_input.user_text
@@ -55,6 +60,11 @@ def generate_schema(user_input: UserInput):
 
     selected_schema = select_schema(template_id, user_text)
     return selected_schema
+
+@app.post("/regenerate-text")
+def regenerate_text(request: TextRequest):
+    text = request.text
+    return {"regenerated_text": generate_text(f"rewrite this text: {text}")}
 
 # Run the FastAPI app
 if __name__ == "__main__":

@@ -1,4 +1,1 @@
-graduation-project-ai
-
-```
-uvicorn app:app --reload
+# graduation-project-ai
