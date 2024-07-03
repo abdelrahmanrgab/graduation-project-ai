@@ -1,12 +1,12 @@
-from utils import generate_text, search_image
+from utils import generate_text, search_image  
 
 def schema_2(user_text):
     return {
         "templateInfo": {
             "id": 2,
-            "title": generate_text(f"Generate a short name for a website about {user_text}"),
-            "description": generate_text(f"Provide a brief description for a website about {user_text} in 15 words"),
-            "imgUrl": search_image(f"Main theme image for {user_text}")
+            "title": generate_text(f"Generate a name for a website in just 2 words about {user_text}"),
+            "description": generate_text(f"Create a brief description for a website in just 20 words about {user_text}"),
+            "imgUrl": search_image(f"Find an image link to be used as a logo for a website about {user_text}")
         },
         "navbar": [
             {
@@ -31,143 +31,182 @@ def schema_2(user_text):
             }
         ],
         "hero": {
-            "title": generate_text(f"Hero section title about {user_text} in 5 words"),
-            "subtitle": generate_text(f"Subtitle for the hero section about {user_text} in 10 words"),
-            "image": search_image(f"Hero section image for {user_text}"),
-            "cards": [
+            "title": generate_text(f"Generate a title for this website in just 5 words about {user_text}"),
+            "subtitle": generate_text(f"Generate a subtitle for this website in just 5 words about {user_text}"),
+            "imgUrl": search_image(f"Find an image link to be used as wallpaper for a website about {user_text}"),
+            "heros": [
                 {
                     "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134251/book-svgrepo-com_f62qre.svg",
-                    "title": generate_text(f"First hero card title about {user_text} in 3 words"),
-                    "content": generate_text(f"First hero card content about {user_text} in 10 words")
+                    "title": generate_text(f"Generate a title name for a card related to {user_text}"),
+                    "description": generate_text(f"Create a brief description in 15 words for a card related to {user_text}")
                 },
                 {
                     "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134396/users-svgrepo-com_acna7b.svg",
-                    "title": generate_text(f"Second hero card title about {user_text} in 3 words"),
-                    "content": generate_text(f"Second hero card content about {user_text} in 10 words")
+                    "title": generate_text(f"Generate a title name for a card related to {user_text}"),
+                    "description": generate_text(f"Create a brief description in 15 words for a card related to {user_text}")
                 },
                 {
                     "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134396/project-svgrepo-com_qjvqow.svg",
-                    "title": generate_text(f"Third hero card title about {user_text} in 3 words"),
-                    "content": generate_text(f"Third hero card content about {user_text} in 10 words")
+                    "title": generate_text(f"Generate a title name for a card related to {user_text}"),
+                    "description": generate_text(f"Create a brief description in 15 words for a card related to {user_text}")
                 }
             ],
-            "description": generate_text(f"Brief description for the hero section about {user_text} in 20 words")
+            "description": generate_text(f"Create a brief description in 20 words for the hero section about {user_text}")
         },
         "testimonials": {
             "title": "What the People Think About Us",
-            "subtitle": generate_text(f"Subtitle for the testimonials section about {user_text} in 10 words"),
-            "cards": [
+            "subtitle": generate_text(f"Generate a subtitle in 5 words for testimonials related to {user_text}"),
+            "testimonials": [
                 {
-                    "avatar": search_image(f"First client testimonial portrait for {user_text}"),
-                    "name": generate_text(f"First client testimonial name for {user_text}"),
-                    "review": generate_text(f"First client testimonial review for {user_text} in 20 words")
+                    "imgUrl": search_image("Portrait of a client"),
+                    "name": generate_text(f"Generate a name in 2 words"),
+                    "opinion": generate_text(f"Generate a brief description in 10 to 15 words for a client who used our services about {user_text}")
                 },
                 {
-                    "avatar": search_image(f"Second client testimonial portrait for {user_text}"),
-                    "name": generate_text(f"Second client testimonial name for {user_text}"),
-                    "review": generate_text(f"Second client testimonial review for {user_text} in 20 words")
+                    "imgUrl": search_image("Portrait of a client"),
+                    "name": generate_text(f"Generate a name in 2 words"),
+                    "opinion": generate_text(f"Generate a brief description in 10 to 15 words for a client who used our services about {user_text}")
                 },
                 {
-                    "avatar": search_image(f"Third client testimonial portrait for {user_text}"),
-                    "name": generate_text(f"Third client testimonial name for {user_text}"),
-                    "review": generate_text(f"Third client testimonial review for {user_text} in 20 words")
+                    "imgUrl": search_image("Portrait of a client"),
+                    "name": generate_text(f"Generate a name in 2 words"),
+                    "opinion": generate_text(f"Generate a brief description in 10 to 15 words for a client who used our services about {user_text}")
                 },
                 {
-                    "avatar": search_image(f"Fourth client testimonial portrait for {user_text}"),
-                    "name": generate_text(f"Fourth client testimonial name for {user_text}"),
-                    "review": generate_text(f"Fourth client testimonial review for {user_text} in 20 words")
+                    "imgUrl": search_image("Portrait of a client"),
+                    "name": generate_text(f"Generate a name in 2 words"),
+                    "opinion": generate_text(f"Generate a brief description in 10 to 15 words for a client who used our services about {user_text}")
                 }
             ]
         },
         "projects": {
-            "cards": [
+            "title": "My Recent Work",
+            "description": "Projects",
+            "projects": [
                 {
-                    "image": search_image(f"First project image for {user_text}"),
-                    "title": generate_text(f"First project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 },
                 {
-                    "image": search_image(f"Second project image for {user_text}"),
-                    "title": generate_text(f"Second project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 },
                 {
-                    "image": search_image(f"Third project image for {user_text}"),
-                    "title": generate_text(f"Third project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 },
                 {
-                    "image": search_image(f"Fourth project image for {user_text}"),
-                    "title": generate_text(f"Fourth project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 },
                 {
-                    "image": search_image(f"Fifth project image for {user_text}"),
-                    "title": generate_text(f"Fifth project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 },
                 {
-                    "image": search_image(f"Sixth project image for {user_text}"),
-                    "title": generate_text(f"Sixth project title for {user_text} in 5 words"),
-                    "githubLink": "https://github.com",
-                    "demoLink": "https://dribbble.com/Alien_pixels"
+                    "imgUrl": search_image(f"Find an image to describe {user_text} as a project"),
+                    "title": generate_text(f"Generate a title name for a project related to {user_text}"),
+                    "url": "https://github.com",
+                    "link": "https://dribbble.com/Alien_pixels"
                 }
             ]
         },
         "contact": {
-            "title": generate_text(f"Contact section title for {user_text} in 5 words"),
-            "subtitle": generate_text(f"Contact section subtitle for {user_text} in 10 words"),
-            "options": [
+            "title": generate_text(f"Generate a title in 5 words for contact section related to {user_text}"),
+            "description": generate_text(f"Generate a subtitle in 10 words for contact section related to {user_text}"),
+            "contacts": [
                 {
-                    "title": "Email",
-                    "subtitle": generate_text(f"Brief email subtitle for {user_text} in 10 words"),
-                    "link": "mailto:ahmed.solimanth57@gmail.com",
-                    "logo": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134252/gmail-svgrepo-com_xppy7f.svg"
+                    "type": "email",
+                    "title": generate_text(f"Generate a subtitle in 5 words for email contact related to {user_text}"),
+                    "email": "mailto:ahmed.solimanth57@gmail.com",
+                    "buttonText": "Connect",
+                    "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134252/gmail-svgrepo-com_xppy7f.svg"
                 },
                 {
-                    "title": "Messenger",
-                    "subtitle": generate_text(f"Brief Messenger subtitle for {user_text} in 10 words"),
-                    "link": "https://m.me/ahmed.soliman.3591267",
-                    "logo": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134252/facebook-svgrepo-com_lmghnk.svg"
+                    "type": "facebook",
+                    "title": generate_text(f"Generate a subtitle in 5 words for Messenger contact related to {user_text}"),
+                    "email": "mailto:ahmed.solimanth57@gmail.com",
+                    "buttonText": "Connect",
+                    "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134252/facebook-svgrepo-com_lmghnk.svg"
                 },
                 {
-                    "title": "WhatsApp",
-                    "subtitle": generate_text(f"Brief WhatsApp subtitle for {user_text} in 10 words"),
-                    "link": "https://wa.me/1234567890",
-                    "logo": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134203/whatsapp-whats-app-svgrepo-com_ug4dbt.svg"
+                    "type": "whatsapp",
+                    "title": generate_text(f"Generate a subtitle in 5 words for WhatsApp contact related to {user_text}"),
+                    "email": "mailto:ahmed.solimanth57@gmail.com",
+                    "buttonText": "Connect",
+                    "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134203/whatsapp-whats-app-svgrepo-com_ug4dbt.svg"
                 }
             ],
-            "send": {
-                "title": "Send",
-                "action": "sendEmail"
-            },
-            "sendMessage": {
-                "title": "Send a message",
-                "action": "sendWhatsAppMessage"
-            }
+            "buttonText": "Send",
+            "linkText": "Send Message"
         },
         "services": {
-            "title": generate_text(f"Services section title for {user_text} in 5 words"),
-            "subtitle": generate_text(f"Services section subtitle for {user_text} in 10 words"),
+            "title": "What We Offer",
+            "description": "Services",
             "services": [
                 {
-                    "title": generate_text(f"First service title for {user_text} in 5 words"),
-                    "description": generate_text(f"First service description for {user_text} in 15 words")
+                    "title": "UI/UX Design",
+                    "items": ["lorem ipsum,", "Llorem ipsuma,", "Blorem ipsumm,", "Dilorem ipsumll,", "lorem ipsum"],
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134251/correct-signal-svgrepo-com_vvf3sw.svg"
                 },
                 {
-                    "title": generate_text(f"Second service title for {user_text} in 5 words"),
-                    "description": generate_text(f"Second service description for {user_text} in 15 words")
+                    "title": "Web Development",
+                    "items": ["lorem ipsum,", "Llorem ipsuma,", "Blorem ipsumm,", "Dilorem ipsumll,", "lorem ipsum"],
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134251/correct-signal-svgrepo-com_vvf3sw.svg"
                 },
                 {
-                    "title": generate_text(f"Third service title for {user_text} in 5 words"),
-                    "description": generate_text(f"Third service description for {user_text} in 15 words")
+                    "title": "Content Creation",
+                    "items": ["lorem ipsum,", "Llorem ipsuma,", "Blorem ipsumm,", "Dilorem ipsumll,", "lorem ipsum"],
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134251/correct-signal-svgrepo-com_vvf3sw.svg"
                 }
             ]
+        },
+        "footer": {
+            "title": "CSE",
+            "description": "ssssssssssssssssssssss all rights reserved.",
+            "footerSections": [
+                { "title": "Home", "url": "#hero2" },
+                { "title": "Services", "url": "#services2" },
+                { "title": "Testimonials", "url": "#testimonials2" },
+                { "title": "Contact", "url": "#contactUs2" }
+            ],
+            "medias": [
+                {
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703129090/icons8-facebook-50_xfbimo.png",
+                    "url": "https://facebook.com"
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg",
+                    "url": "https://x.com"
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg",
+                    "url": "https://linkedin.com"
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg",
+                    "url": "https://instagram.com"
+                },
+                {
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703129090/icons8-facebook-50_xfbimo.png",
+                    "url": "https://facebook.com"
+                }
+            ]
+        },
+        "colors": {
+            "templateColors": ["#fff", "#cda274", "#292f36", "#f4f0ec", "#777777"]
         }
     }
+
+
 
