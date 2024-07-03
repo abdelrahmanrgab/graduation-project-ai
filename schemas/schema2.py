@@ -6,7 +6,8 @@ def schema_2(user_text):
             "id": 2,
             "title": generate_text(f"Generate a name for a website in just 2 words about {user_text}"),
             "description": generate_text(f"Create a brief description for a website in just 20 words about {user_text}"),
-            "imgUrl": search_image(f"Find an image link to be used as a logo for a website about {user_text}")
+            "imgUrl": search_image(f"Find an image link to be used as a logo for a website about {user_text}"),
+            "ahmed": "ahmed"
         },
         "navbar": [
             {
@@ -50,8 +51,7 @@ def schema_2(user_text):
                     "title": generate_text(f"Generate a title name for a card related to {user_text}"),
                     "description": generate_text(f"Create a brief description in 15 words for a card related to {user_text}")
                 }
-            ],
-            "description": generate_text(f"Create a brief description in 20 words for the hero section about {user_text}")
+            ]
         },
         "testimonials": {
             "title": "What the People Think About Us",
@@ -207,6 +207,4 @@ def schema_2(user_text):
             "templateColors": ["#fff", "#cda274", "#292f36", "#f4f0ec", "#777777"]
         }
     }
-
-
 

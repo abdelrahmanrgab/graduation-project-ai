@@ -128,50 +128,165 @@ def schema_1(user_text):
         },
         "items": {
             "title": "Articles & News",
-            "description": generate_text(f"Create a brief description for an articles section in 20 words about {user_text}"),
+            "description": "It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.",
             "items": [
                 {
-                    "title": generate_text(f"Generate a title for an article related to {user_text}"),
-                    "subtitle": generate_text(f"Generate a subtitle for an article related to {user_text}"),
-                    "description": generate_text(f"Generate a publication date for an article related to {user_text}"),
-                    "imgUrl": search_image(f"I need an image for an article related to {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
+                    "title": "Let’s Get Solution For Building Construction Work",
+                    "subtitle": "Kitchen Design",
+                    "description": "26 December, 2022",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718041/templates/template_one/article1.f88f54e6a4cdbf340b36_l3ujjw.png",
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg",
                 },
                 {
-                    "title": generate_text(f"Generate a title for an article related to {user_text}"),
-                    "subtitle": generate_text(f"Generate a subtitle for an article related to {user_text}"),
-                    "description": generate_text(f"Generate a publication date for an article related to {user_text}"),
-                    "imgUrl": search_image(f"I need an image for an article related to {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
+                    "title": "Low Cost Latest Invented Interior Designing Ideas.",
+                    "subtitle": "Living Design",
+                    "description": "22 December, 2022",
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718042/templates/template_one/article2.43be768543cb8cfeaf07_atvwjd.png",
                 },
                 {
-                    "title": generate_text(f"Generate a title for an article related to {user_text}"),
-                    "subtitle": generate_text(f"Generate a subtitle for an article related to {user_text}"),
-                    "description": generate_text(f"Generate a publication date for an article related to {user_text}"),
-                    "imgUrl": search_image(f"I need an image for an article related to {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
+                    "title": "Best For Any Office & Business Interior Solution",
+                    "subtitle": "Interior Design",
+                    "description": "25 December, 2022",
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718042/templates/template_one/article3.f759fde0c85f3fb92b22_c2tqkv.png",
+                },
+            ],
+        },
+        "team": {
+            "title": "Our Team Members",
+            "members": [
+                {
+                    "memberId": "1",
+                    "name": "Nattasha",
+                    "email": "julie@email.com",
+                    "location": "Design, Australia",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808855/templates/template_one/Photo_fz8cuc.jpg",
+                    "medias": [
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg", "url": "https://facebook.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg", "url": "https://x.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg", "url": "https://linkedin.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg", "url": "https://instagram.com"}
+                    ]
+                },
+                {
+                    "memberId": "2",
+                    "name": "Julie",
+                    "email": "julie@email.com",
+                    "location": "Design, Australia",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808855/templates/template_one/Photo_fz8cuc.jpg",
+                    "medias": [
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg", "url": "https://facebook.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg", "url": "https://x.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg", "url": "https://linkedin.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg", "url": "https://instagram.com"}
+                    ]
+                },
+                {
+                    "memberId": "3",
+                    "name": "Alex",
+                    "email": "julie@email.com",
+                    "location": "Design, Australia",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808855/templates/template_one/Photo_fz8cuc.jpg",
+                    "medias": [
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg", "url": "https://facebook.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg", "url": "https://x.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg", "url": "https://linkedin.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg", "url": "https://instagram.com"}
+                    ]
+                },
+                {
+                    "memberId": "4",
+                    "name": "John",
+                    "email": "julie@email.com",
+                    "location": "Design, Australia",
+                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808855/templates/template_one/Photo_fz8cuc.jpg",
+                    "medias": [
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg", "url": "https://facebook.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg", "url": "https://x.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg", "url": "https://linkedin.com"},
+                        {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg", "url": "https://instagram.com"}
+                    ]
                 }
             ]
         },
-        "contact": {
-            "title": "Get In Touch",
-            "description": generate_text(f"Create a brief description for a contact section in 10 words about {user_text}"),
-            "address": "66 broklyn Street, New York",
-            "email": "example@email.com",
-            "phone": "+07 554 332 322",
-            "imgUrl": search_image(f"I need an image to represent contact related to {user_text}")
-        },
-        "social": {
-            "title": "Follow Us On",
-            "icons": [
-                {"imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701717448/templates/template_one/fb_cjmkfw.svg", "url": "https://facebook.com"},
-                {"imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701717448/templates/template_one/Vector_oplddv.svg", "url": "https://twitter.com"},
-                {"imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701717448/templates/template_one/in_rkmxz6.svg", "url": "https://linkedin.com"},
-                {"imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701717448/templates/template_one/ig_uqknkl.svg", "url": "https://instagram.com"},
-                {"imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701717448/templates/template_one/tik_nl3bzx.svg", "url": "https://tiktok.com"}
+        "pricing": {
+            "title": "Pricing & Plan",
+            "description": "Home / Pricing",
+            "plans": [
+                {
+                    "title": "Design advices",
+                    "price": "29",
+                    "timeUnit": "month",
+                    "moneyUnit": "$",
+                    "features": ["General living space advices", "Renovation advices", "Interior design advices", "Furniture reorganization", "Up to 5 hours meetings"],
+                    "buttonText": "Get Started",
+                    "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1709586475/Vector_urtrep.svg"
+                },
+                {
+                    "title": "Design advices",
+                    "price": "39",
+                    "timeUnit": "month",
+                    "moneyUnit": "$",
+                    "features": ["Complete home redesign", "Interior and exterior works", "Modular interior planning", "Kitchen design", "Garages organization"],
+                    "buttonText": "Get Started",
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701813389/templates/template_one/Vector_5_vvvt2o.svg"
+                },
+                {
+                    "title": "Furniture design",
+                    "price": "59",
+                    "timeUnit": "month",
+                    "moneyUnit": "$",
+                    "features": ["Furniture for living room", "Furniture refurbishment", "Sofas and armchairs", "Tables and chairs", "Kitchens"],
+                    "buttonText": "Get Started",
+                    "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1709586475/Vector_urtrep.svg"
+                }
             ]
+        },
+        "cta": {
+            "title": "Wanna join the interno?",
+            "description": "It is a long established fact  will be distracted.",
+            "buttonText": "Contact With Us",
+            "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1709586475/Vector_urtrep.svg"
+        },
+        "footer": {
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701811960/templates/template_one/Logo_mj7rvw.png",
+            "description": "It is a long established fact that a reader will be distracted lookings.",
+            "medias": [
+                {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg", "url": "https://facebook.com"},
+                {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg", "url": "https://x.com"},
+                {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg", "url": "https://linkedin.com"},
+                {"icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg", "url": "https://instagram.com"}
+            ],
+            "footerSections": [
+                {
+                    "title": "Services",
+                    "links": [
+                        {"title": "Kitchen", "url": "#"},
+                        {"title": "Living Area", "url": "#"},
+                        {"title": "Bathroom", "url": "#"},
+                        {"title": "Dining Hall", "url": "#"},
+                        {"title": "Bedroom", "url": "#"}
+                    ]
+                },
+                {
+                    "title": "Sections",
+                    "links": [
+                        {"title": "About Us", "url": "#"},
+                        {"title": "Projects", "url": "#"},
+                        {"title": "Our Team", "url": "#"},
+                        {"title": "Contact Us", "url": "#"},
+                        {"title": "Services", "url": "#"}
+                    ]
+                }
+            ],
+            "contacts": [
+                {"value": "55 East Birchwood Ave. Brooklyn, New York 11201"},
+                {"value": "contact@interno.com"},
+                {"value": "(123) 125-858"}
+            ]
+        },
+        "colors": {
+            "templateColors": ["#ffffff", "#cda274", "#292f36", "#f4f0ec", "#777777"]
         }
     }
-
-
-
