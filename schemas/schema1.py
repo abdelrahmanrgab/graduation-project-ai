@@ -4,8 +4,8 @@ def schema_1(user_text):
     return {
         "templateInfo": {
             "id": 1,
-            "title": generate_text(f"generate only name for a website in just 2 words about {user_text}"),
-            "description": generate_text(f"generate a description for a website in just 10 words about {user_text}"),
+            "title": generate_text(f"generate just only only name for a website in just 2 words about {user_text}"),
+            "description": generate_text(f"generate just only a description for a website in just 10 words about {user_text}"),
             "imgUrl": search_image(f"generate an image URL for a website about {user_text}")
         },
         "navbar": {
@@ -20,8 +20,8 @@ def schema_1(user_text):
             ]
         },
         "hero": {
-            "title": generate_text(f"generate title for this website in just 5 words {user_text}"),
-            "description": generate_text(f"Create a brief description for a website in just 20 words about {user_text}"),
+            "title": generate_text(f"generate just only title for this website in just 5 words {user_text}"),
+            "description": generate_text(f"Create just only a brief description for a website in just 20 words about {user_text}"),
             "buttonText": "Get Started",
             "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701813389/templates/template_one/Vector_5_vvvt2o.svg",
             "imgUrl": search_image(f"I need a link for an image to be used as wallpaper for a website about {user_text}")
@@ -46,8 +46,8 @@ def schema_1(user_text):
             ]
         },
         "features": {
-            "title": generate_text(f"Suggest a title for a feature in 10 words related to {user_text}"),
-            "description": generate_text(f"Create a brief description in 20-25 words for a feature related to {user_text}"),
+            "title": generate_text(f"generate just only a title for a feature in 10 words related to {user_text}"),
+            "description": generate_text(f"Create just only a brief description in 20-25 words for a feature related to {user_text}"),
             "phone": "012345678",
             "buttonText": "Get Free Estimate",
             "icons": [
@@ -63,19 +63,19 @@ def schema_1(user_text):
                     "name": "Nattasha Mith",
                     "location": "Sydney, USA",
                     "imgUrl": search_image("portrait of a client"),
-                    "opinion": generate_text(f"Generate a brief description in 10-15 words for a client who used our services about {user_text}")
+                    "opinion": generate_text(f"Generate just only a brief description in 10-15 words for a client who used our services about {user_text}")
                 },
                 {
                     "name": "Raymond Galario",
                     "location": "Sydney, Australia",
                     "imgUrl": search_image("portrait of a client"),
-                    "opinion": generate_text(f"Generate a brief description in 10-15 words for a client who used our services about {user_text}")
+                    "opinion": generate_text(f"Generate just only a brief description in 10-15 words for a client who used our services about {user_text}")
                 },
                 {
                     "name": "Benny Roll",
                     "location": "Sydney, New York",
                     "imgUrl": search_image("portrait of a client"),
-                    "opinion": generate_text(f"Generate a brief description in 10-15 words for a client who used our services about {user_text}")
+                    "opinion": generate_text(f"Generate just only a brief description in 10-15 words for a client who used our services about {user_text}")
                 }
             ]
         },
@@ -90,29 +90,29 @@ def schema_1(user_text):
         },
         "projects": {
             "title": "Follow Our Projects",
-            "description": generate_text(f"Create a brief description for a projects section in 20 words about {user_text}"),
+            "description": generate_text(f"Create just only a brief description for a projects section in 20 words about {user_text}"),
             "projects": [
                 {
-                    "title": generate_text(f"Generate a project title related to {user_text}"),
-                    "description": generate_text(f"Create a brief description for a project in 10 words related to {user_text}"),
+                    "title": generate_text(f"Generate just only a project title related to {user_text}"),
+                    "description": generate_text(f"Create just only a brief description for a project in 10 words related to {user_text}"),
                     "imgUrl": search_image(f"I need an image for a project related to {user_text}"),
                     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
                 },
                 {
-                    "title": generate_text(f"Generate a project title related to {user_text}"),
-                    "description": generate_text(f"Create a brief description for a project in 10 words related to {user_text}"),
+                    "title": generate_text(f"Generate just only a project title related to {user_text}"),
+                    "description": generate_text(f"Create just only a brief description for a project in 10 words related to {user_text}"),
                     "imgUrl": search_image(f"I need an image for a project related to {user_text}"),
                     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
                 },
                 {
-                    "title": generate_text(f"Generate a project title related to {user_text}"),
-                    "description": generate_text(f"Create a brief description for a project in 10 words related to {user_text}"),
+                    "title": generate_text(f"Generate just only a project title related to {user_text}"),
+                    "description": generate_text(f"Create just only a brief description for a project in 10 words related to {user_text}"),
                     "imgUrl": search_image(f"I need an image for a project related to {user_text}"),
                     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
                 },
                 {
-                    "title": generate_text(f"Generate a project title related to {user_text}"),
-                    "description": generate_text(f"Create a brief description for a project in 10 words related to {user_text}"),
+                    "title": generate_text(f"Generate just only a project title related to {user_text}"),
+                    "description": generate_text(f"Create just only a brief description for a project in 10 words related to {user_text}"),
                     "imgUrl": search_image(f"I need an image for a project related to {user_text}"),
                     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701718889/templates/template_one/Vector_5_nzmfwn.svg"
                 }
