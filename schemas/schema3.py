@@ -4,8 +4,8 @@ def schema_3(user_text):
     return {
         "templateInfo": {
             "id": 3,
-            "title": generate_text(f"Create a concise title in 2-3 words for a website about {user_text}"),
-            "description": generate_text(f"Generate a short description in 10-15 words summarizing what the website about {user_text} offers"),
+            "title": generate_text(f"Create just only one a title in 2-3 words for a website about {user_text}"),
+            "description": generate_text(f"Generate just only one a short description in 10-15 words summarizing what the website about {user_text} offers"),
             "imgUrl": search_image(f"Find a suitable logo image for a website focused on {user_text}")
         },
         "navbar": {
@@ -19,10 +19,10 @@ def schema_3(user_text):
             ]
         },
         "hero": {
-            "title": generate_text(f"Craft a compelling main title in 5-7 words for the hero section about {user_text}"),
-            "subtitle": generate_text(f"Write an engaging subtitle in 5-7 words for the hero section about {user_text}"),
+            "title": generate_text(f"Generate just only one a compelling main title in 5-7 words for the hero section about {user_text}"),
+            "subtitle": generate_text(f"Generate just only one an engaging subtitle in 5-7 words for the hero section about {user_text}"),
             "imgUrl": search_image(f"Locate a high-quality hero image related to {user_text} for the website"),
-            "description": generate_text(f"Provide a brief description in 20-30 words highlighting the key message for the hero section about {user_text}"),
+            "description": generate_text(f"Generate just only one a brief description in 20-30 words highlighting the key message for the hero section about {user_text}"),
             "heros": [
                 {"title": "+140", "subtitle": "EXPERT COACHS"},
                 {"title": "+978", "subtitle": "MEMBERS JOINED"},
@@ -37,29 +37,29 @@ def schema_3(user_text):
             "subtitle": "PROGRAMS",
             "description": "TO SHAPE YOU",
             "buttonText": "Join Now",
-            "imgUrl": search_image(f"Find an appealing image for the Programs section related to {user_text}"),
+            "imgUrl": search_image(f"Generate just only one an appealing image for the Programs section related to {user_text}"),
             "projects": [
                 {
-                    "title": generate_text(f"Create a project title in 3-5 words for Strength Training related to {user_text}"),
-                    "description": generate_text(f"Provide a brief description in 15-20 words for the Strength Training project about {user_text}"),
+                    "title": generate_text(f"Generate just only one a project title in 3-5 words for Strength Training related to {user_text}"),
+                    "description": generate_text(f"Generate just only one a brief description in 15-20 words for the Strength Training project about {user_text}"),
                 },
                 {
-                    "title": generate_text(f"Create a project title in 3-5 words for Cardio Training related to {user_text}"),
-                    "description": generate_text(f"Provide a brief description in 15-20 words for the Cardio Training project about {user_text}"),
+                    "title": generate_text(f"Generate just only one a project title in 3-5 words for Cardio Training related to {user_text}"),
+                    "description": generate_text(f"Generate just only one a brief description in 15-20 words for the Cardio Training project about {user_text}"),
                 },
                 {
-                    "title": generate_text(f"Create a project title in 3-5 words for Fat Burning related to {user_text}"),
-                    "description": generate_text(f"Provide a brief description in 15-20 words for the Fat Burning project about {user_text}"),
+                    "title": generate_text(f"Generate just only one a project title in 3-5 words for Fat Burning related to {user_text}"),
+                    "description": generate_text(f"Generate just only one a brief description in 15-20 words for the Fat Burning project about {user_text}"),
                 },
                 {
-                    "title": generate_text(f"Create a project title in 3-5 words for Health Fitness related to {user_text}"),
-                    "description": generate_text(f"Provide a brief description in 15-20 words for the Health Fitness project about {user_text}"),
+                    "title": generate_text(f"Generate just only one a project title in 3-5 words for Health Fitness related to {user_text}"),
+                    "description": generate_text(f"Generate just only one a brief description in 15-20 words for the Health Fitness project about {user_text}"),
                 },
             ],
         },
         "features": {
-            "title": generate_text(f"Create a concise title in 5-7 words for the features section about {user_text}"),
-            "subtitle": generate_text(f"Write a subtitle in 5-7 words summarizing the key features of {user_text}"),
+            "title": generate_text(f"Generate just only one a concise title in 5-7 words for the features section about {user_text}"),
+            "subtitle": generate_text(f"Generate just only one a subtitle in 5-7 words summarizing the key features of {user_text}"),
             "imgs": [
                 search_image(f"Find a feature image 1 that represents {user_text}"),
                 search_image(f"Find a feature image 2 that represents {user_text}"),
@@ -79,46 +79,46 @@ def schema_3(user_text):
             ],
         },
         "pricing": {
-            "title": generate_text(f"Create a title in 5-7 words for the pricing section about {user_text}"),
-            "subtitle": generate_text(f"Write a subtitle in 5-7 words explaining the pricing plans for {user_text}"),
-            "text": generate_text(f"Provide a brief description in 10-15 words summarizing the pricing options for {user_text}"),
-            "description": generate_text(f"Provide a detailed description in 20-30 words for the pricing section about {user_text}"),
+            "title": generate_text(f"Generate just only one a title in 5-7 words for the pricing section about {user_text}"),
+            "subtitle": generate_text(f"Generate just only one a subtitle in 5-7 words explaining the pricing plans for {user_text}"),
+            "text": generate_text(f"Generate just only one a brief description in 10-15 words summarizing the pricing options for {user_text}"),
+            "description": generate_text(f"Generate just only one a detailed description in 20-30 words for the pricing section about {user_text}"),
             "buttonText": "Join Now",
             "imgUrl": search_image(f"Find a relevant image for the pricing section related to {user_text}"),
             "plans": [
                 {
-                    "title": generate_text(f"Create a title in 3-5 words for the Basic Plan related to {user_text}"),
+                    "title": generate_text(f"Generate just only one a title in 3-5 words for the Basic Plan related to {user_text}"),
                     "price": "25",
                     "features": [
-                        generate_text(f"List a feature in 5-7 words for the Basic Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Basic Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Basic Plan about {user_text}"),
+                        generate_text(f"Generate just only one a feature in 5-7 words for the Basic Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Basic Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Basic Plan about {user_text}"),
                     ],
                 },
                 {
-                    "title": generate_text(f"Create a title in 3-5 words for the Premium Plan related to {user_text}"),
+                    "title": generate_text(f"Generate just only one a title in 3-5 words for the Premium Plan related to {user_text}"),
                     "price": "30",
                     "features": [
-                        generate_text(f"List a feature in 5-7 words for the Premium Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Premium Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Premium Plan about {user_text}"),
+                        generate_text(f"Generate just only one a feature in 5-7 words for the Premium Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Premium Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Premium Plan about {user_text}"),
                     ],
                 },
                 {
-                    "title": generate_text(f"Create a title in 3-5 words for the Pro Plan related to {user_text}"),
+                    "title": generate_text(f"Generate just only one a title in 3-5 words for the Pro Plan related to {user_text}"),
                     "price": "45",
                     "features": [
-                        generate_text(f"List a feature in 5-7 words for the Pro Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Pro Plan about {user_text}"),
-                        generate_text(f"List another feature in 5-7 words for the Pro Plan about {user_text}"),
+                        generate_text(f"Generate just only one a feature in 5-7 words for the Pro Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Pro Plan about {user_text}"),
+                        generate_text(f"Generate just only one another feature in 5-7 words for the Pro Plan about {user_text}"),
                     ],
                 },
             ],
         },
         "testimonials": {
-            "title": generate_text(f"Create a title in 5-7 words for the testimonials section about {user_text}"),
-            "subtitle": generate_text(f"Write a subtitle in 5-7 words highlighting customer experiences with {user_text}"),
-            "description": generate_text(f"Provide a brief description in 15-20 words summarizing customer feedback about {user_text}"),
+            "title": generate_text(f"Generate just only one a title in 5-7 words for the testimonials section about {user_text}"),
+            "subtitle": generate_text(f"Generate just only one a subtitle in 5-7 words highlighting customer experiences with {user_text}"),
+            "description": generate_text(f"Generate just only one a brief description in 15-20 words summarizing customer feedback about {user_text}"),
             "imgs": [
                 search_image(f"Find a testimonial image 1 that represents customer experiences with {user_text}"),
                 search_image(f"Find a testimonial image 2 that represents customer experiences with {user_text}"),
