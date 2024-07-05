@@ -13,8 +13,10 @@ from schemas.schema11 import schema_11
 from schemas.schema12 import schema_12
 from schemas.schema13 import schema_13
 from schemas.schema14 import schema_14
-
-
+from schemas.schema15 import schema_15
+from schemas.schema16 import schema_16
+from schemas.schema17 import schema_17
+from schemas.schema18 import schema_18
 app = FastAPI()
 
 class UserInput(BaseModel):
@@ -47,7 +49,12 @@ def select_schema(template_id, user_text):
         11:schema_11,
         12:schema_12,
         13:schema_13,
-        14:schema_14,
+        14:schema_14,,
+        15:schema_15,
+        16:schema_16,
+        17:schema_17,
+        18:schema_18
+
         
     }
     
