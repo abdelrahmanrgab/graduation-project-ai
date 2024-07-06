@@ -5,34 +5,26 @@ def schema_14(user_text):
         "templateInfo": {
             "id": 14,
             "title": generate_text(f"generate only name for a website in just 2 words about {user_text}"),
-            "description": "",
-            "imgUrl": ""
+            "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
+            "imgUrl": search_image(f"generate an image URL for a website about {user_text}")
         },
         "navbar": {
             "title": generate_text(f"generate title for the navbar of a website about {user_text}"),
             "links": [
-                {
+              {
                     "title": "Home",
                     "url": "#"
                 },
                 {
-                    "title": "Pages",
+                    "title": "Shop",
                     "url": "#"
                 },
                 {
-                    "title": "Services",
+                    "title": "About",
                     "url": "#"
                 },
                 {
-                    "title": "Projects",
-                    "url": "#"
-                },
-                {
-                    "title": "Blog",
-                    "url": "#"
-                },
-                {
-                    "title": "Contact",
+                    "title": "Blogs",
                     "url": "#"
                 }
             ],
@@ -44,42 +36,80 @@ def schema_14(user_text):
         },
         "hero": {
             "heros": [
-                {
+                 {
                     "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602286/headphone_qbcak3.png",
                     "subtitle": "Beats Solo",
                     "title": "Wireless",
                     "description": "Headphone"
+                },
+                {
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602303/vr_zzinjy.png",
+                    "subtitle": "Beats Solo",
+                    "title": "Wireless",
+                    "description": "Virtual"
+                },
+                {
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602295/macbook_dxcdn8.png",
+                    "subtitle": "Beats Solo",
+                    "title": "Branded",
+                    "description": "Laptops"
                 }
-            ],
-            "buttonText": "Get Started"
+                ],
+                "buttonText": "Shop By Category"
         },
         "items": {
             "title": "Enjoy",
             "subtitle": "With",
             "items": [
-                {
-                    "title":"Earph",
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777277/earphone_pgistv.png"
-                },
-                {
-                    "title": "Gadget",
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777305/watch_dn63md.png"
-                }
+           {
+                "title": "Earph",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777277/earphone_pgistv.png"
+            },
+            {
+                "title": "Gadget",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777305/watch_dn63md.png"
+            },
+            {
+                "title": "Laptop",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602295/macbook_dxcdn8.png"
+            },
+            {
+                "title": "Laptop",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777316/gaming_zceuxk.png"
+            },
+            {
+                "title": "Gadget",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602303/vr_zzinjy.png"
+            },
+            {
+                "title": "Earph",
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707777323/speaker_wqwmry.png"
+            }
             ],
             "buttonText": "Browse"
         },
         "services": {
             "services": [
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_one_xvd7d6.svg",
-                    "title": "Free Shipping",
-                    "description": "Free Shipping On All Order"
-                },
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808099/templates/template_one/icon_two_dptua1.svg",
-                    "title":  "Safe Money ",
-                    "description":  "30 Days Money Back"
-                }
+             {
+                "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602721/icons8-sedan-30_zecew1.png",
+                "title": "Free Shipping",
+                "description": "Free Shipping On All Order"
+            },
+            {
+                "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602913/icons8-checkmark-64_kxv4x8.png",
+                "title": "Safe Money ",
+                "description": "30 Days Money Back"
+            },
+            {
+                "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602989/icons8-wallet-30_prjgk8.png",
+                "title": "Secure Payment",
+                "description": "All Payment Secure"
+            },
+            {
+                "icon": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707603085/icons8-headphones-30_xandnm.png",
+                "title": "Online Supoort 24/7",
+                "description": "Technical Support 24/7"
+            }
             ]
         },
         "features": {
@@ -93,19 +123,49 @@ def schema_14(user_text):
             "buttonText": "Shop Now"
         },
         "projects": {
-            "title": "Our Projects",
-            "description": "Explore Our Projects",
-            "projects": [
-                {
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604733/p-1_mqzmix.jpg",
-                    "title": "Boat Headphone",
-                    "price": "120"
-                },
-                {
-                       "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604737/p-2_qc3prb.jpg",
-                       "title": "Rocky Mountain",
-                       "price": "420"
-                               }
+                "title": "Our Projects",
+                "description": "Explore Our Projects",
+                "projects": [
+                    {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604733/p-1_mqzmix.jpg",
+                "title": "Boat Headphone",
+                "price": "120"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604737/p-2_qc3prb.jpg",
+                "title": "Rocky Mountain",
+                "price": "420"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604741/p-3_gfoj4a.jpg",
+                "title": "Goggles",
+                "price": "320"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604745/p-4_hkawqn.jpg",
+                "title": "Printed ",
+                "price": "220"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604748/p-5_lbyuxu.jpg",
+                "title": "Boat Headphone",
+                "price": "120"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604761/p-7_fkl1tb.jpg",
+                "title": "Rocky Mountain",
+                "price": "420"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604765/p-9_bypahb.jpg",
+                "title": "Goggles",
+                "price": "320"
+            },
+            {
+                "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604748/p-5_lbyuxu.jpg",
+                "title": "Printed ",
+                "price": "220"
+            }
             ],
             "buttonText": "Add to cart"
         },
@@ -113,49 +173,96 @@ def schema_14(user_text):
             "title": "Recent News",
             "description": "Explore Our Blogs",
             "blogs": [
-                {
-                    "title": "Recent News",
-                    "subtitle": generate_text(f"Generate a blog subtitle related to {user_text}"),
-                    "description": "Jan 20, 2024",
-                    "imgUrl": search_image(f"I need an image for a blog related to {user_text}")
-                },
-                {
-                    "title": "How to choose perfect smartwatch",
-                    "subtitle": generate_text(f"Generate another blog subtitle related to {user_text}"),
-                    "description": "Jan 22, 2024",
-                    "imgUrl": search_image(f"I need another image for a blog related to {user_text}")
-                }
-            ]
+               {
+            "title": "How to choose perfect smartwatch",
+            "subtitle": "minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae Porro?",
+            "description": "Jan 20, 2024 by Dilshad",
+            "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604612/blog-1_n5jvci.jpg"
         },
+        {
+            "title": "How to choose perfect gadget",
+            "subtitle": "minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae Porro?",
+            "description": "Jan 20, 2024 by Satya",
+            "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604616/blog-2_nmxkbb.jpg"
+        },
+        {
+            "title": "How to choose perfect VR headset",
+            "subtitle": "minima facere deserunt vero illo beatae deleniti eius dolores consequuntur, eligendi corporis maiores molestiae Porro?",
+            "description": "Jan 20, 2024 by Sabir",
+            "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707604621/blog-3_ko9kq9.jpg"
+        }
+        ]
+    },
         "logos": {
             "companies": [
                 {
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808448/templates/template_one/01_p78hjd.svg",
-                    "url": "https://example.com"
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707780037/br-1_hqubpv.png",
+                    "url": "https://examble.com"
                 },
                 {
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808448/templates/template_one/02_mnw1ps.svg",
-                    "url": "https://example.com"
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707780041/br-2_tlsefn.png",
+                    "url": "https://examble.com"
+                },
+                {
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707780045/br-3_tjyara.png",
+                    "url": "https://examble.com"
+                },
+                {
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707780049/br-4_zf3evw.png",
+                    "url": "https://examble.com"
+                },
+                {
+                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707780053/br-5_tczupi.png",
+                    "url": "https://examble.com"
                 }
-            ]
-        },
+                ]
+            },
         "footer": {
             "title":"Eshop",
             "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701808855/templates/template_one/Photo_fz8cuc.jpg",
             "description": generate_text(f"Generate a brief description for the footer about {user_text}"),
-            "medias": [
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg",
-                    "url": "https://facebook.com"
-                },
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg",
-                    "url": "https://x.com"
-                }
-            ],
+          "medias": [
+                    {
+                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/facebook_td263x.svg",
+                        "url": "https://facebook.com"
+                    },
+                    {
+                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/x_yp3y5n.svg",
+                        "url": "https://x.com"
+                    },
+                    {
+                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809142/templates/template_one/linkedin_itbvp5.svg",
+                        "url": "https://linkedin.com"
+                    },
+                    {
+                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1701809141/templates/template_one/instagram_dlrab9.svg",
+                        "url": "https://instagram.com"
+                    }
+                    ],
             "footerSections": [
                 {
                     "title": "Important Links",
+                    "links": [
+                     {
+                            "title": "Home",
+                            "url": "#home"
+                        },
+                        {
+                            "title": "About",
+                            "url": "#about"
+                        },
+                        {
+                            "title": "Contact",
+                            "url": "#contact"
+                        },
+                        {
+                            "title": "Blog",
+                            "url": "#blog"
+                        }
+                        ]
+                    },
+                {
+                    "title": "Quick Links",
                     "links": [
                         {
                             "title": "Home",
@@ -164,12 +271,7 @@ def schema_14(user_text):
                         {
                             "title": "About",
                             "url": "#about"
-                        }
-                    ]
-                },
-                {
-                    "title": "Quick Links",
-                    "links": [
+                        },
                         {
                             "title": "Contact",
                             "url": "#contact"

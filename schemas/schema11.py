@@ -5,8 +5,8 @@ def schema_11(user_text):
         "templateInfo": {
             "id": 11,
             "title": generate_text(f"generate only name for a website in just 2 words about {user_text}"),
-            "description": "",
-            "imgUrl": ""
+            "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
+            "imgUrl": search_image(f"generate an image URL for a website about {user_text}")
         },
         "navbar": {
             "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707525696/jammal_photos/wmm8wc8r2ijrtguljwaa.svg",

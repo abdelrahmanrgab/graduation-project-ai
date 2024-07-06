@@ -5,8 +5,8 @@ def schema_13(user_text):
         "templateInfo": {
             "id": 13,
             "title": generate_text(f"Generate a website name in 2 words about {user_text}"),
-            "description": "",
-            "imgUrl": ""
+            "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
+            "imgUrl": search_image(f"generate an image URL for a website about {user_text}")
         },
         "navbar": {
             "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707951170/lighting_o2dsku.png",
@@ -93,6 +93,12 @@ def schema_13(user_text):
                     "title": generate_text(f"Generate another title for a project about {user_text}"),
                     "description": "Luxor",
                     "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707553370/klipartz.com_z2zhsv.png"
+                },
+                 {
+                    "imgUrl": search_image(f"I need another image for a project about {user_text}"),
+                    "title": generate_text(f"Generate another title for a project about {user_text}"),
+                    "description": "Luxor",
+                    "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707553370/klipartz.com_z2zhsv.png"
                 }
             ],
             "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707553370/klipartz.com_z2zhsv.png"
@@ -113,26 +119,49 @@ def schema_13(user_text):
                 {"imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703129091/icons8-stars-50_o1lg9s.png", "title": "lighting"}
             ]
         },
-        "testimonials": {
-            "title": "What our  ",
-            "subtitle":"Clients",
-            "description":"say's",
-            "testimonials": [
-                {
-                    "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
-                    "name": "ahmed",
-                    "location": "CEO at AST",
-                    "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+      "testimonials": {
+                    "title": "What our  ",
+                    "subtitle": "Clients",
+                    "description": "say's",
+                    "testimonials": [
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    },
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    },
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    },
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    },
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    },
+                    {
+                        "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
+                        "name": "ahmed",
+                        "location": "CEO at AST",
+                        "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
+                    }
+                    ]
                 },
-                {
-                    "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1703134020/avatar3_pbztwn.jpg",
-                    "name": "ahmed",
-                    "location": "CEO at AST",
-                    "opinion": "We would like to take the opportunity to express our delights with the ways things are progressing."
-                }
-            ],
-            "icon": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707952901/right-arrow_1_y7iz2i.png"
-        },
         "footer": {
             "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707938679/lightning_h1zfze.png",
             "description": "Architecture with understanding people minds",
