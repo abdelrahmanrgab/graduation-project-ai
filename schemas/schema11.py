@@ -71,7 +71,7 @@ def schema_11(user_text):
             ],
         },
         "services": {
-            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707529935/jammal_photos/qkowgxkdtneaviwup0dv.svg",
+            "imgUrl": search_image(f"generate an image URL for a website services about {user_text}"),
             "description": generate_text(f"Create a brief description for a website in just 20 words about {user_text}"),
             "buttonText": "Download CV",
             "services": [
@@ -160,25 +160,25 @@ def schema_11(user_text):
                     "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707315138/jammal_photos/jjusigmt6zz4eo7i00rm.svg",
                     "year": "2019 - present",
                     "title": "Web Designer",
-                    "description": "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+                    "description":generate_text(f"Create a brief description in 15 words for a service related to {user_text}"),
                 },
                 {
                     "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707315138/jammal_photos/jjusigmt6zz4eo7i00rm.svg",
                     "year": "2013 - 2017",
                     "title": "Front-End Developer",
-                    "description": "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+                    "description": generate_text(f"Create a brief description in 15 words for a service related to {user_text}"),
                 },
                 {
                     "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707315138/jammal_photos/jjusigmt6zz4eo7i00rm.svg",
                     "year": "2009 - 2013",
                     "title": "Back-End Developer",
-                    "description": "Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.",
+                    "description": generate_text(f"Create a brief description in 15 words for a service related to {user_text}"),
                 },
             ],
         },
         "projects": {
             "title": "Projects",
-            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1707532366/jammal_photos/j8mhijwgfitdt7jodrfo.png",
+            "imgUrl": search_image(f"generate an image URL for a website about {user_text}"),
             "categories": ["Everything", "Creative", "Art", "Design", "Branding"],
             "projects": [
                 {

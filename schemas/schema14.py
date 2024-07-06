@@ -37,22 +37,22 @@ def schema_14(user_text):
         "hero": {
             "heros": [
                  {
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602286/headphone_qbcak3.png",
+                    "imgUrl": search_image(f"generate an image URL for a website hero section about {user_text}"),
                     "subtitle": "Beats Solo",
-                    "title": "Wireless",
-                    "description": "Headphone"
+                    "title":generate_text(f"generate just only one  name for a website hero title in just 2 words about {user_text}"),
+                    "description": generate_text(f"generate just only one a description for a website hero section in just 10 words about {user_text}")
                 },
                 {
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602303/vr_zzinjy.png",
+                    "imgUrl": search_image(f"generate an image URL for a website hero section about {user_text}"),
                     "subtitle": "Beats Solo",
-                    "title": "Wireless",
-                    "description": "Virtual"
+                    "title": generate_text(f"generate just only one  name for a website hero title in just 2 words about {user_text}"),
+                    "description": generate_text(f"generate just only one a description for a website hero section in just 10 words about {user_text}")
                 },
                 {
-                    "imgUrl": "https://res.cloudinary.com/dmcdea0b9/image/upload/v1707602295/macbook_dxcdn8.png",
+                    "imgUrl": search_image(f"generate an image URL for a website hero section about {user_text}"),
                     "subtitle": "Beats Solo",
-                    "title": "Branded",
-                    "description": "Laptops"
+                    "title": generate_text(f"generate just only one  name for a website hero title in just 2 words about {user_text}"),
+                    "description": generate_text(f"generate just only one a description for a website hero section in just 10 words about {user_text}")
                 }
                 ],
                 "buttonText": "Shop By Category"

@@ -163,7 +163,7 @@ def schema_13(user_text):
                     ]
                 },
         "footer": {
-            "imgUrl": "https://res.cloudinary.com/dowtlcpxj/image/upload/v1707938679/lightning_h1zfze.png",
+            "imgUrl": search_image(f"generate an image URL for a website footer about {user_text}"),
             "description": "Architecture with understanding people minds",
             "medias": [
                 {

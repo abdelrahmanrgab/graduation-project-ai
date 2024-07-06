@@ -25,8 +25,8 @@ def schema_6(user_text):
          "buttonText": "Explore Food",
          "heros": [
            {
-        "title": "Experience the Authentic Flavors",
-        "description": "Indulge in our simple and delicious dishes crafted with the finest ingredients. Your taste buds will thank you!",
+        "title": generate_text(f"generate just only one  name for a website hero title in just 2 words about {user_text}"),
+        "description": generate_text(f"generate just only one a description for a website hero section in just 10 words about {user_text}"),
         "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703096681/jammal_photos/eukd4unr2l7mwyllvmi9.png"
       },
       {
@@ -73,14 +73,14 @@ def schema_6(user_text):
     },
 
     "products": {
-    "title": "Our Menu Pack",
-    "subtitle": "Price: $",
+    "title": generate_text(f"generate just only one title name for products related to {user_text}"),
+    "subtitle": generate_text(f"generate just only one price for products related to {user_text}" + "$"),
     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
     "rateIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706352872/jammal_photos/v02eynmgkqv3wkrbhnda.svg",
 
     "products": [
       {
-        "title": "FAST FOOD",
+        "title": generate_text(f"generate just only one title name for products related to {user_text}"),
         "items": [
           {
             "itemId": "05",
@@ -133,7 +133,7 @@ def schema_6(user_text):
         ]
       },
       {
-        "title": "RICE MENU",
+        "title": generate_text(f"generate just only one title name for products related to {user_text}"),
         "items": [
           {
             "itemId": "12",
@@ -347,9 +347,9 @@ def schema_6(user_text):
     ]
     },
             "features": {
-                "title": "Who we are?",
-                "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103180/jammal_photos/afcfogeancctcy4nhsfn.png",
-                "description": "Take a look at the benefits we offer you",
+                "title": generate_text(f"generate just only one  name for a website features section in just 2 words about {user_text}"),
+                "imgUrl": search_image(f"generate an image URL for a website about {user_text}"),
+                "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
                 "text": "we prioritize your satisfaction. Our commitment to excellence is evitemIdent in the benefits we offer. ",
                 "features": [
                 {
@@ -374,52 +374,45 @@ def schema_6(user_text):
                 }
                 ]
             },
-        "features": {
-                "title": "Who we are?",
-                "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103180/jammal_photos/afcfogeancctcy4nhsfn.png",
-                "description": "Take a look at the benefits we offer you",
-                "text": "we prioritize your satisfaction. Our commitment to excellence is evitemIdent in the benefits we offer. ",
-                "features": [
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103379/jammal_photos/wvvtn9lgn5k84md2jhtm.svg",
-                    "title": "Free Home Delivery",
-                    "description": "Enjoy free and timely home delivery. "
-                },
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103489/jammal_photos/rihmvtglekzcmjdavtbm.svg",
-                    "title": "Return & Refund",
-                    "description": "We guarantee a hassle-free return and refund process. "
-                },
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103560/jammal_photos/k3irnc1fhkmugeekjbol.svg",
-                    "title": "Secure Payment",
-                    "description": "Your transactions are securely processed. "
-                },
-                {
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103423/jammal_photos/legalyoxmyba3arp5n3p.svg",
-                    "title": "24/7 Hours Support",
-                    "description": "We are here for you round the clock. "
-                }
-                ]
-            },
-                "cta": {
-                    "title": "Download our app",
-                    "description": " Never Feel Hungry! Download Our Mobile App Order Delicious Food",
-                    "info": "Experience the convenience of our mobile app, ensuring you never go hungry, Download now to order delicious food anytime, anywhere. ",
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703105732/jammal_photos/lldrbchcloecmarn2bep.png",
-                    "googleButton": {
-                    "buttonText": "Google Play",
-                    "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106187/jammal_photos/bm7fqpnzrwtkawffbci3.svg"
+        "testimonials": {
+                  "title": "What our customers are saying",
+                  "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703093874/jammal_photos/dwbzkjuoel7mlgqohppt.png",
+                  "testimonials": [
+                    {
+                      "opinion": "I'm impressed with the professionalism and quality of service. The team delivered beyond my expectations!",
+                      "name": "Alice Johnson",
+                      "role": "Marketing Manager"
                     },
-                    "appleButton": {
-                    "buttonText": "Apple Store",
-                    "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106097/jammal_photos/gmyir4uguaz6ejvw3s3t.svg"
+                    {
+                      "opinion": "Great experience working with this company. The attention to detail and dedication of the team is commendable.",
+                      "name": "Bob Smith",
+                      "role": "Business Owner"
+                    },
+                    {
+                      "opinion": "The website they developed for us not only looks fantastic but also performs exceptionally well. Highly recommended!",
+                      "name": "Emily Davis",
+                      "role": "UX Designer"
                     }
+                  ]
                 },
+                              "cta": {
+                        "title": "Download our app",
+                        "description": " Never Feel Hungry! Download Our Mobile App Order Delicious Food",
+                        "info": "Experience the convenience of our mobile app, ensuring you never go hungry, Download now to order delicious food anytime, anywhere. ",
+                        "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703105732/jammal_photos/lldrbchcloecmarn2bep.png",
+                        "googleButton": {
+                        "buttonText": "Google Play",
+                        "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106187/jammal_photos/bm7fqpnzrwtkawffbci3.svg"
+                        },
+                        "appleButton": {
+                        "buttonText": "Apple Store",
+                        "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106097/jammal_photos/gmyir4uguaz6ejvw3s3t.svg"
+                        }
+                    },
             "footer": {
                     "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706351943/jammal_photos/jicfizb2xdqr8hcgkmc4.png",
-                    "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095423/jammal_photos/x22ihnvjg9i0i40xtbo5.svg",
-                    "description": "It is a long established fact that a reader will be distracted lookings.",
+                    "imgUrl": search_image(f"generate an image URL for a website about {user_text}"),
+                    "description": generate_text(f"generate just only one a description for a website footer in just 10 words about {user_text}"),
                     "title": "copyright 2022, developed by ana. All rights reserved",
                     "footerSections": [
                     {
@@ -465,21 +458,13 @@ def schema_6(user_text):
                         ]
                     }
                     ],
-                    "contacts": [
-                    {
-                        "value": "Sylhet, Bangladesh",
-                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108316/jammal_photos/oe8rjvrg0ckgohix2b6v.svg"
-                    },
-                    {
-                        "value": "example@gmail.com",
-                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108228/jammal_photos/opdhewds9do1znaaj5li.svg"
-                    },
-                    {
-                        "value": "+880 123 456 7890",
-                        "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108367/jammal_photos/y2583eh76th902gnzlje.svg"
-                    }
-                    ]
-                },
+                           "contacts": [
+                          {"value": "Sylhet, Bangladesh","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108316/jammal_photos/oe8rjvrg0ckgohix2b6v.svg"},
+                          {"value": "example@gmail.com","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108228/jammal_photos/opdhewds9do1znaaj5li.svg"},
+                          {"value": "+880 123 456 7890","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108367/jammal_photos/y2583eh76th902gnzlje.svg"}
+                      ]
+                  },
+
                 "colors": {
                     "templateColors": ["#0a071a", "#141124", "#f76e11", "#f5b70a", "#fff", "#c4c4c4b5"]
                 }
