@@ -1,20 +1,18 @@
-import random
-from datetime import datetime
 from utils import generate_text, search_image
 
 def schema_6(user_text):
     return {
-        "templateInfo": {
+       "templateInfo": {
             "id": 6,
-            "title": generate_text(f"Generate a 2-word name for a fitness website about {user_text}"),
-            "description": generate_text(f"Create a brief description for a fitness website in 20 words about {user_text}"),
-            "imgUrl": search_image(f"Fitness website logo related to {user_text}")
+            "title": generate_text(f"generate just only one  name for a website in just 2 words about {user_text}"),
+            "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
+            "imgUrl": search_image(f"generate an image URL for a website about {user_text}")
         },
         "navbar": {
-            "logo": search_image(f"Minimalist fitness logo icon for {user_text}"),
-            "searchIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095771/jammal_photos/kedw9coptwqkovrsssd1.svg",
-            "shoppingIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
-            "menuIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095877/jammal_photos/rwbeynsg3bftgrjqaqnf.svg",
+               "title": generate_text(f"generate just only one  name for a website in just 2 words about {user_text}"),
+               "searchIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095771/jammal_photos/kedw9coptwqkovrsssd1.svg",
+               "shoppingIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
+               "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095877/jammal_photos/rwbeynsg3bftgrjqaqnf.svg",
             "links": [
                 {"title": "Home", "url": "#"},
                 {"title": "About", "url": "#"},
@@ -23,208 +21,451 @@ def schema_6(user_text):
                 {"title": "Contact", "url": "#"}
             ]
         },
-        "hero": {
-            "buttonText": generate_text(f"Generate a 2-word call-to-action for {user_text}"),
-            "heros": [
-                {
-                    "id": "01",
-                    "title": generate_text(f"Create a 5-word title for the main hero section about {user_text}"),
-                    "description": generate_text(f"Write a 15-word description for the main hero section about {user_text}"),
-                    "imgUrl": search_image(f"Fitness hero image for {user_text}")
-                },
-                {
-                    "id": "02",
-                    "title": generate_text(f"Create a 5-word title for the second hero section about {user_text}"),
-                    "description": generate_text(f"Write a 15-word description for the second hero section about {user_text}"),
-                    "imgUrl": search_image(f"Another fitness hero image for {user_text}")
-                },
-                {
-                    "id": "03",
-                    "title": generate_text(f"Create a 5-word title for the third hero section about {user_text}"),
-                    "description": generate_text(f"Write a 15-word description for the third hero section about {user_text}"),
-                    "imgUrl": search_image(f"Third fitness hero image for {user_text}")
-                }
-            ]
+         "hero": {
+         "buttonText": "Explore Food",
+         "heros": [
+           {
+        "title": generate_text(f"generate just only one  name for a website hero title in just 2 words about {user_text}"),
+        "description": generate_text(f"generate just only one a description for a website hero section in just 10 words about {user_text}"),
+        "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703096681/jammal_photos/eukd4unr2l7mwyllvmi9.png"
+      },
+      {
+        "title": "Bring Joy to Your Taste Buds",
+        "description": "At our restaurant, we believe good food leads to great smiles. Explore our menu and discover a world of culinary delight.",
+        "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703096719/jammal_photos/j7y2zx8aolnucnu25dl4.png"
+      },
+      {
+        "title": "Savor Every Bite, Create Memories",
+        "description": "Meet, eat, and enjoy the true taste of happiness. Our diverse menu ensures there's something for everyone to relish and remember.",
+        "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703096745/jammal_photos/j97dbol3pzuleeccxwdt.png"
+      }
+    ]
+  },
+
+       "menu": {
+    "Title": "Popular food menu",
+    "subtitle": "Price: $",
+    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
+    "rateIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706352872/jammal_photos/v02eynmgkqv3wkrbhnda.svg",
+
+        "services": [
+        {
+            "title": "Vegetable",
+            "price": 25,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098596/jammal_photos/n4r8kzctvhbymxmmydhq.png"
         },
-        "menu": {
-            "Title": generate_text(f"Generate a 3-word title for the fitness menu section about {user_text}"),
-            "Card": {
-                "shoppingIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
-                "rateIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706352872/jammal_photos/v02eynmgkqv3wkrbhnda.svg",
-                "valueName": "Price: $"
-            },
-            "Menus": [
-                {
-                    "id": "01",
-                    "title": generate_text(f"Generate a 1-word title for a fitness menu item related to {user_text}"),
-                    "price": 25,
-                    "imgUrl": search_image(f"Fitness menu item image for {user_text}")
-                },
-                {
-                    "id": "02",
-                    "title": generate_text(f"Generate another 1-word title for a fitness menu item related to {user_text}"),
-                    "price": 250,
-                    "imgUrl": search_image(f"Another fitness menu item image for {user_text}")
-                },
-                {
-                    "id": "03",
-                    "title": generate_text(f"Generate a third 1-word title for a fitness menu item related to {user_text}"),
-                    "price": 45,
-                    "imgUrl": search_image(f"Third fitness menu item image for {user_text}")
-                },
-                {
-                    "id": "04",
-                    "title": generate_text(f"Generate a fourth 1-word title for a fitness menu item related to {user_text}"),
-                    "price": 75,
-                    "imgUrl": search_image(f"Fourth fitness menu item image for {user_text}")
-                }
-            ]
+        {
+            "title": "Chicken",
+            "price": 250,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098694/jammal_photos/rbtige8oucnpqluq3b5j.png"
         },
-        "products": {
-            "menuTitle": generate_text(f"Generate a 3-4 word title for the menu section related to {user_text}"),
-            "Card": {
-                "shoppingIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
-                "rateIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706352872/jammal_photos/v02eynmgkqv3wkrbhnda.svg",
-                "valueName": "Price: $"
-            },
-            "filterContent": [
-                {
-                    "title": generate_text(f"Generate a 2-word category name for {user_text} products"),
-                    "content": [
-                        {
-                            "id": str(i+1).zfill(2),
-                            "title": generate_text(f"Generate a 1-2 word product name for {user_text} category 1, item {i+1}"),
-                            "price": round(random.uniform(10, 300), 2),
-                            "imgUrl": search_image(f"{user_text} product image for category 1, item {i+1}")
-                        } for i in range(8)
-                    ]
-                },
-                {
-                    "title": generate_text(f"Generate another 2-word category name for {user_text} products"),
-                    "content": [
-                        {
-                            "id": str(i+9).zfill(2),
-                            "title": generate_text(f"Generate a 1-2 word product name for {user_text} category 2, item {i+1}"),
-                            "price": round(random.uniform(10, 300), 2),
-                            "imgUrl": search_image(f"{user_text} product image for category 2, item {i+1}")
-                        } for i in range(8)
-                    ]
-                },
-                {
-                    "title": generate_text(f"Generate a third 2-word category name for {user_text} products"),
-                    "content": [
-                        {
-                            "id": str(i+17).zfill(2),
-                            "title": generate_text(f"Generate a 1-2 word product name for {user_text} category 3, item {i+1}"),
-                            "price": round(random.uniform(10, 300), 2),
-                            "imgUrl": search_image(f"{user_text} product image for category 3, item {i+1}")
-                        } for i in range(8)
-                    ]
-                },
-                {
-                    "title": generate_text(f"Generate a fourth 2-word category name for {user_text} products"),
-                    "content": [
-                        {
-                            "id": str(i+25).zfill(2),
-                            "title": generate_text(f"Generate a 1-2 word product name for {user_text} category 4, item {i+1}"),
-                            "price": round(random.uniform(10, 300), 2),
-                            "imgUrl": search_image(f"{user_text} product image for category 4, item {i+1}")
-                        } for i in range(8)
-                    ]
-                },
-                {
-                    "title": generate_text(f"Generate a fifth 2-word category name for {user_text} products"),
-                    "content": [
-                        {
-                            "id": str(i+33).zfill(2),
-                            "title": generate_text(f"Generate a 1-2 word product name for {user_text} category 5, item {i+1}"),
-                            "price": round(random.uniform(10, 300), 2),
-                            "imgUrl": search_image(f"{user_text} product image for category 5, item {i+1}")
-                        } for i in range(8)
-                    ]
-                }
-            ]
+        {
+            "title": "Whipped Cream",
+            "price": 45,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098853/jammal_photos/zuclkds0uufzktzfeien.png"
         },
-        "features": {
-            "title": generate_text(f"Generate a 3-4 word question about the identity of {user_text}"),
-            "imgUrl": search_image(f"Representative image for {user_text} business"),
-            "description": generate_text(f"Create a 7-10 word tagline about the benefits of {user_text}"),
-            "info": generate_text(f"Write a 15-20 word statement about commitment to excellence for {user_text}"),
-            "cards": [
-                {
-                    "icon": search_image(f"Icon for {feature} related to {user_text}"),
-                    "title": generate_text(f"Generate a 2-3 word title for {feature} feature of {user_text}"),
-                    "description": generate_text(f"Write a 8-10 word description for {feature} feature of {user_text}")
-                } for feature in ["delivery", "customer service", "security", "support"]
-            ]
-        },
-        "testimonials": {
-            "title": generate_text(f"Generate a 5-7 word title for customer testimonials about {user_text}"),
-            "imgUrl": search_image(f"Customer testimonial background image for {user_text}"),
-            "cards": [
-                {
-                    "content": generate_text(f"Write a 20-25 word testimonial for {user_text} from perspective of a {role}"),
-                    "name": generate_text(f"Generate a full name for a {role}"),
-                    "role": role
-                } for role in ["customer", "business partner", "employee"]
-            ]
-        },
-        "cta": {
-            "title": generate_text(f"Generate a 3-4 word call-to-action title for {user_text} app"),
-            "description": generate_text(f"Write a 10-12 word compelling description for downloading the {user_text} app"),
-            "info": generate_text(f"Create a 20-25 word detailed description of the benefits of the {user_text} app"),
-            "imgUrl": search_image(f"Mobile app mockup for {user_text}"),
-            "googleButton": {
-                "title": "Google Play",
-                "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106187/jammal_photos/bm7fqpnzrwtkawffbci3.svg"
-            },
-            "appleButton": {
-                "title": "Apple Store",
-                "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106097/jammal_photos/gmyir4uguaz6ejvw3s3t.svg"
-            }
-        },
-        "footer": {
-            "logo": search_image(f"Logo for {user_text}"),
-            "imgUrl": search_image(f"Footer background image for {user_text}"),
-            "description": generate_text(f"Write a 15-20 word description about {user_text} for the footer"),
-            "copyright": f"Copyright {datetime.now().year}, {generate_text(f'Generate a 2-3 word company name for {user_text}')}. All rights reserved",
-            "footerSections": [
-                {
-                    "title": "Info Links",
-                    "links": [
-                        {"title": link, "url": "#"} for link in ["Terms & Conditions", "Privacy Policy", "Return & Refund", "Payment Method"]
-                    ]
-                },
-                {
-                    "title": "Quick Links",
-                    "links": [
-                        {"title": generate_text(f"Generate a 1-2 word link name related to {user_text}"), "url": "#"} for _ in range(4)
-                    ]
-                }
-            ],
-            "contacts": [
-                {
-                    "value": generate_text(f"Generate a fictional address for {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108316/jammal_photos/oe8rjvrg0ckgohix2b6v.svg"
-                },
-                {
-                    "value": generate_text(f"Generate a fictional email for {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108228/jammal_photos/opdhewds9do1znaaj5li.svg"
-                },
-                {
-                    "value": generate_text(f"Generate a fictional phone number for {user_text}"),
-                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108367/jammal_photos/y2583eh76th902gnzlje.svg"
-                }
-            ]
-        },
-        "colors": {
-            "templateColors": [
-                generate_text(f"Generate a dark color hex code for {user_text}"),
-                generate_text(f"Generate another dark color hex code for {user_text}"),
-                generate_text(f"Generate a vibrant color hex code for {user_text}"),
-                generate_text(f"Generate another vibrant color hex code for {user_text}"),
-                "#fff",
-                generate_text(f"Generate a light gray color hex code for {user_text}")
-            ]
+        {
+            "title": "Pizza",
+            "price": 75,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
         }
-    }
+        ]
+    },
+
+    "products": {
+    "title": generate_text(f"generate just only one title name for products related to {user_text}"),
+    "subtitle": generate_text(f"generate just only one price for products related to {user_text}" + "$"),
+    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703095842/jammal_photos/gehvutbyftfxemvoqmu8.svg",
+    "rateIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706352872/jammal_photos/v02eynmgkqv3wkrbhnda.svg",
+
+    "products": [
+      {
+        "title": generate_text(f"generate just only one title name for products related to {user_text}"),
+        "items": [
+          {
+            "itemId": "05",
+            "title": "Burger",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "06",
+            "title": "Chicken",
+            "price": 250,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "07",
+            "title": "Grill Chicken",
+            "price": 195,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "08",
+            "title": "Barbeque",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "09",
+            "title": "Pizza",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "10",
+            "title": "Burger",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "11",
+            "title": "Chicken",
+            "price": 250,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          },
+          {
+            "itemId": "12",
+            "title": "Grill Chicken",
+            "price": 195,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099049/jammal_photos/nw1126s6ntsb3o2ohs3s.png"
+          }
+        ]
+      },
+      {
+        "title": generate_text(f"generate just only one title name for products related to {user_text}"),
+        "items": [
+          {
+            "itemId": "12",
+            "title": "Fried Rice",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "14",
+            "title": "Vegetable",
+            "price": 250,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "15",
+            "title": "Vegetable",
+            "price": 195,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "16",
+            "title": "Meal",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "17",
+            "title": "Fried Rice",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "18",
+            "title": "Vegetable",
+            "price": 250,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "19",
+            "title": "Vegetable",
+            "price": 195,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          },
+          {
+            "itemId": "20",
+            "title": "Meal",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099126/jammal_photos/t6olygisps4ufz02fezk.png"
+          }
+        ]
+      },
+      {
+        "title": "DESSERT",
+        "items": [
+          {
+            "itemId": "21",
+            "title": "Whipped Cream",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099235/jammal_photos/mwphxi7ujoec1c2krana.png"
+          },
+          {
+            "itemId": "22",
+            "title": "Cake Cream",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098853/jammal_photos/zuclkds0uufzktzfeien.png"
+          },
+          {
+            "itemId": "23",
+            "title": "Cake",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099235/jammal_photos/mwphxi7ujoec1c2krana.png"
+          },
+          {
+            "itemId": "24",
+            "title": "Cup Cake",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099335/jammal_photos/why415hwonyxffn1cyon.png"
+          },
+          {
+            "itemId": "25",
+            "title": "Whipped Cream",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099235/jammal_photos/mwphxi7ujoec1c2krana.png"
+          },
+          {
+            "itemId": "26",
+            "title": "Cake Cream",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098853/jammal_photos/zuclkds0uufzktzfeien.png"
+          },
+          {
+            "itemId": "27",
+            "title": "Cake",
+            "price": 50,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099235/jammal_photos/mwphxi7ujoec1c2krana.png"
+          },
+          {
+            "itemId": "28",
+            "title": "Cup Cake",
+            "price": 275,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099335/jammal_photos/why415hwonyxffn1cyon.png"
+          }
+        ]
+      },
+      {
+        "title": "PIZZA",
+        "items": [
+          {
+            "itemId": "29",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "30",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "31",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "32",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "33",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "34",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "35",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          },
+          {
+            "itemId": "36",
+            "title": "Pizza",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703098919/jammal_photos/bvipjezk42alazv5roew.png"
+          }
+        ]
+      },
+      {
+        "title": "COFFEE",
+        "items": [
+          {
+            "itemId": "37",
+            "title": "Hot Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "38",
+            "title": "Cold Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "39",
+            "title": "Black Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "40",
+            "title": "White Coffee",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "41",
+            "title": "Hot Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "42",
+            "title": "Cold Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "43",
+            "title": "Black Coffee",
+            "price": 20,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          },
+          {
+            "itemId": "44",
+            "title": "White Coffee",
+            "price": 95,
+            "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703099401/jammal_photos/tb2lmnbq0imabiyxzsub.png"
+          }
+        ]
+      }
+    ]
+    },
+            "features": {
+                "title": generate_text(f"generate just only one  name for a website features section in just 2 words about {user_text}"),
+                "imgUrl": search_image(f"generate an image URL for a website about {user_text}"),
+                "description": generate_text(f"generate just only one a description for a website in just 10 words about {user_text}"),
+                "text": "we prioritize your satisfaction. Our commitment to excellence is evitemIdent in the benefits we offer. ",
+                "features": [
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103379/jammal_photos/wvvtn9lgn5k84md2jhtm.svg",
+                    "title": "Free Home Delivery",
+                    "description": "Enjoy free and timely home delivery. "
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103489/jammal_photos/rihmvtglekzcmjdavtbm.svg",
+                    "title": "Return & Refund",
+                    "description": "We guarantee a hassle-free return and refund process. "
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103560/jammal_photos/k3irnc1fhkmugeekjbol.svg",
+                    "title": "Secure Payment",
+                    "description": "Your transactions are securely processed. "
+                },
+                {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703103423/jammal_photos/legalyoxmyba3arp5n3p.svg",
+                    "title": "24/7 Hours Support",
+                    "description": "We are here for you round the clock. "
+                }
+                ]
+            },
+        "testimonials": {
+                  "title": "What our customers are saying",
+                  "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703093874/jammal_photos/dwbzkjuoel7mlgqohppt.png",
+                  "testimonials": [
+                    {
+                      "opinion": "I'm impressed with the professionalism and quality of service. The team delivered beyond my expectations!",
+                      "name": "Alice Johnson",
+                      "role": "Marketing Manager"
+                    },
+                    {
+                      "opinion": "Great experience working with this company. The attention to detail and dedication of the team is commendable.",
+                      "name": "Bob Smith",
+                      "role": "Business Owner"
+                    },
+                    {
+                      "opinion": "The website they developed for us not only looks fantastic but also performs exceptionally well. Highly recommended!",
+                      "name": "Emily Davis",
+                      "role": "UX Designer"
+                    }
+                  ]
+                },
+                              "cta": {
+                        "title": "Download our app",
+                        "description": " Never Feel Hungry! Download Our Mobile App Order Delicious Food",
+                        "info": "Experience the convenience of our mobile app, ensuring you never go hungry, Download now to order delicious food anytime, anywhere. ",
+                        "imgUrl": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703105732/jammal_photos/lldrbchcloecmarn2bep.png",
+                        "googleButton": {
+                        "buttonText": "Google Play",
+                        "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106187/jammal_photos/bm7fqpnzrwtkawffbci3.svg"
+                        },
+                        "appleButton": {
+                        "buttonText": "Apple Store",
+                        "buttonIcon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703106097/jammal_photos/gmyir4uguaz6ejvw3s3t.svg"
+                        }
+                    },
+            "footer": {
+                    "icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1706351943/jammal_photos/jicfizb2xdqr8hcgkmc4.png",
+                    "imgUrl": search_image(f"generate an image URL for a website about {user_text}"),
+                    "description": generate_text(f"generate just only one a description for a website footer in just 10 words about {user_text}"),
+                    "title": "copyright 2022, developed by ana. All rights reserved",
+                    "footerSections": [
+                    {
+                        "title": "Info Links",
+                        "links": [
+                        {
+                            "title": "Terms & Conditions",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Privacy Policy",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Return & Refund",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Payment Method",
+                            "url": "#"
+                        }
+                        ]
+                    },
+                    {
+                        "title": "Quick Links",
+                        "links": [
+                        {
+                            "title": "About Us",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Menu",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Recipes",
+                            "url": "#"
+                        },
+                        {
+                            "title": "Contact",
+                            "url": "#"
+                        }
+                        ]
+                    }
+                    ],
+                           "contacts": [
+                          {"value": "Sylhet, Bangladesh","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108316/jammal_photos/oe8rjvrg0ckgohix2b6v.svg"},
+                          {"value": "example@gmail.com","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108228/jammal_photos/opdhewds9do1znaaj5li.svg"},
+                          {"value": "+880 123 456 7890","icon": "https://res.cloudinary.com/duc04fwdb/image/upload/v1703108367/jammal_photos/y2583eh76th902gnzlje.svg"}
+                      ]
+                  },
+
+                "colors": {
+                    "templateColors": ["#0a071a", "#141124", "#f76e11", "#f5b70a", "#fff", "#c4c4c4b5"]
+                }
+                }
