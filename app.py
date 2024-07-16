@@ -77,7 +77,7 @@ def generate_schema(user_input: UserInput):
 @app.post("/regenerate-text")
 def regenerate_text(request: TextRequest):
     text = request.text
-    return {"regenerated_text": generate_text(f"rewrite this text: {text}")}
+    return {"regenerated_text": generate_text(f"{text}")}
 
 # Run the FastAPI app
 if __name__ == "__main__":
